@@ -1,41 +1,24 @@
-#### 1. Introduce.
+#### 更改
 
-- 源文件宏依赖
-  - XCURSES -- x11
-  - PDC_RGB -- RGB
-  - PDC_WIDE -- 宽字符支持
-  - PDC_FORCE_UTF8 -- 使用utf-8
-  - PDC_DLL_BUILD -- windows dll动态库
-  - PDC_NCMOUSE -- pdcurses和ncurses鼠标
-  - ...
-- cmake库依赖
-- system
-  - dos MS/IBM老旧废弃考古系统
-    - dos
-    - dosvga
-  - plan9 9fronts废弃考古系统
-    - plan9
-  - os/2 MS/IBM老旧废弃考古系统
-    - os2
-  - linux/*BSD framebuffer帧缓冲
-    - fb
-  - linux
-    - x11 图形窗口
-    - vt  虚拟终端
-  - windows
-    - x11 图形窗口
-    - vt  虚拟终端
-    - wincon 命令终端
-    - wingui gui窗口
-- other 各种库
-  - sdl1.x
-  - sdl2.x
-  - freetype2
-  - sdl2_ttf
-  - zlib
-  - openGL
+```sh
+# 1. 抽离出fb/ncurses/pdcurses/tests/vt/wincon/wingui/x11
+# 2. pdcurses未变更任何东西
+# 3. 更改fb/ncurses/vt/wincon/wingui/x11的CMakeLists.txt, 代码部分未做出更改
+```
 
-#### 2. Build and tests.
+#### 依赖
+
+```sh
+# 头文件依赖包查找和安装
+sudo apt-get install apt-file
+sudo apt-file update
+apt-file search Intrinsic.h
+
+# 安装x11依赖
+sudo apt install libxt-dev libx11-dev
+```
+
+#### 编译
 
 Windows:
 
@@ -70,3 +53,5 @@ mkdir build
 cmake -DBUILD_SUBTARGET_NAME=vt ..
 make 
 ```
+
+
