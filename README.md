@@ -8,3 +8,4 @@
 - [x] [glfw_microui](./glfw_microui/README.md) support cross-platform with cmake.
 - [ ] [gui_cpp](./gui_cpp/README.md) waiting to test.
 - [ ] [notcurses](./notcurses/README.md) only support linux now.
+- [x] [wxWidgets_ui](./wxWidgets_ui/README.md) support cross-platform with cmake.
