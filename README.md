@@ -9,3 +9,8 @@
 - [ ] [gui_cpp](./gui_cpp/README.md) waiting to test.
 - [ ] [notcurses](./notcurses/README.md) only support linux now.
 - [x] [wxWidgets_ui](./wxWidgets_ui/README.md) support cross-platform with cmake.
+
+#### Ref.
+
+- [gui examples](https://github.com/gammasoft71/Examples.git) include xtd/Winforms/Cocoa/FLTK/
+  Gtk/Gtkmm/JUCE/Tkinter/Qt/Win32/wxPython/wxWidgets.
