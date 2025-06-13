@@ -1,0 +1,12 @@
+[package]
+name = "json_parser"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["staticlib"]  # 生成静态库
+
+[dependencies]
+serde_json = "1.0"         # JSON 解析库
+libc = "0.2"               # C 类型兼容
+# cbindgen = "0.29.0"        # 生成头文件（开发依赖）
